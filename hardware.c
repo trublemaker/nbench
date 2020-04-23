@@ -40,9 +40,9 @@ static void removeNewLine(char * s) {
 ** The pointer result must point to a pre-allocated array of at least BUF_SIZ
 */
 static void runCommand (const char *command, char *result) {
-  FILE * pipe;
+  FILE * pipe=NULL;
 
-  pipe = popen(command, "r");
+  //pipe = popen(command, "r");
   if(pipe == NULL) {
     /* command failed */
     result[0] = '\0';
@@ -51,7 +51,7 @@ static void runCommand (const char *command, char *result) {
       /* command failed */
       result[0] = '\0';
     }
-    pclose(pipe);
+    //pclose(pipe);
   }
   removeNewLine(result);
 }

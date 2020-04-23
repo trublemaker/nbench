@@ -26,7 +26,7 @@
 */
 
 /* is this a 64 bit architecture? If so, this will define LONG64 */
-#include "pointer.h"
+//#include "pointer.h"
 
 /*
 ** SYSTEM DEFINES

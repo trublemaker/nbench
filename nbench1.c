@@ -58,7 +58,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <strings.h>
+//#include <strings.h>
 #include <math.h>
 #include "nmglobal.h"
 #include "nbench1.h"
@@ -2918,7 +2918,9 @@ for(i=0;i<256;i++)
 ** was arbitrarily assigned led to an underflow error at runtime. We
 ** use that zeroed-out bits are in fact 0 as a float.
 ** Uwe F. Mayer */
-bzero((char *)&(hufftree[256]),sizeof(huff_node)*256);
+//bzero((char *)&(hufftree[256]),sizeof(huff_node)*256);
+memset((char *)&(hufftree[256]), 0, sizeof(huff_node) * 256);
+
 /*
 ** Build the huffman tree.  First clear all the parent
 ** pointers and left/right pointers.  Also, discard all

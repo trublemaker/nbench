@@ -329,6 +329,7 @@ if(global_custrun==0)
 output_string("* Trademarks are property of their respective holder.\n");
 }
 
+getchar();
 exit(0);
 }
 
